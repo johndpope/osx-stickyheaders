@@ -89,7 +89,6 @@
 		886EBA8213D64393006DE018 /* TUIControl+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 886EBA7E13D64393006DE018 /* TUIControl+Private.m */; };
 		886EBA8313D64393006DE018 /* TUIControl+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 886EBA7E13D64393006DE018 /* TUIControl+Private.m */; };
 		886EBA8413D64393006DE018 /* TUIControl+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 886EBA7E13D64393006DE018 /* TUIControl+Private.m */; };
-		886EBA8513D64393006DE018 /* TUIControl+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 886EBA7E13D64393006DE018 /* TUIControl+Private.m */; };
 		887F272C13F9969800D75DE6 /* TUITableViewSectionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 887F272A13F9969800D75DE6 /* TUITableViewSectionHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		887F272D13F9969800D75DE6 /* TUITableViewSectionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 887F272A13F9969800D75DE6 /* TUITableViewSectionHeader.h */; };
 		887F272E13F9969800D75DE6 /* TUITableViewSectionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 887F272A13F9969800D75DE6 /* TUITableViewSectionHeader.h */; };
@@ -123,12 +122,6 @@
 		88EFFB5513F417E200CF91A9 /* TUITextViewEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EFFB5013F417E200CF91A9 /* TUITextViewEditor.m */; };
 		88EFFB5613F417E200CF91A9 /* TUITextViewEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EFFB5013F417E200CF91A9 /* TUITextViewEditor.m */; };
 		CB5B265A13BE6DA200579B1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB5B265813BE6DA200579B1E /* InfoPlist.strings */; };
-		CB5B266313BE6DA300579B1E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5B266213BE6DA300579B1E /* SenTestingKit.framework */; };
-		CB5B266413BE6DA300579B1E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5B264F13BE6DA200579B1E /* Cocoa.framework */; };
-		CB5B266713BE6DA300579B1E /* TwUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5B264C13BE6DA200579B1E /* TwUI.framework */; };
-		CB5B266D13BE6DA300579B1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB5B266B13BE6DA300579B1E /* InfoPlist.strings */; };
-		CB5B266F13BE6DA300579B1E /* TwUITests.h in Resources */ = {isa = PBXBuildFile; fileRef = CB5B266E13BE6DA300579B1E /* TwUITests.h */; };
-		CB5B267113BE6DA300579B1E /* TwUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5B267013BE6DA300579B1E /* TwUITests.m */; };
 		CB5E31B713BE6F49004B7899 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5E31B613BE6F49004B7899 /* QuartzCore.framework */; };
 		CB5E321D13BE70CA004B7899 /* TUIAccessibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB74C3F13BE6E1900C85CB5 /* TUIAccessibility.m */; };
 		CB5E321F13BE70CA004B7899 /* TUIActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB74C4113BE6E1900C85CB5 /* TUIActivityIndicatorView.m */; };
@@ -267,16 +260,6 @@
 		CBB74CE713BE6E1900C85CB5 /* TUIViewNSViewContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB74C9013BE6E1900C85CB5 /* TUIViewNSViewContainer.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CB5B266513BE6DA300579B1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB5B264213BE6DA200579B1E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB5B264B13BE6DA200579B1E;
-			remoteInfo = TwUI;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		5EE9839C13BE7650005F430D /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		5EE983B713BE7809005F430D /* libtwui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtwui.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,7 +293,6 @@
 		CB5B265713BE6DA200579B1E /* TwUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwUI-Info.plist"; sourceTree = "<group>"; };
 		CB5B265913BE6DA200579B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB5B265B13BE6DA200579B1E /* TwUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwUI-Prefix.pch"; sourceTree = "<group>"; };
-		CB5B266113BE6DA300579B1E /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5B266213BE6DA300579B1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CB5B266A13BE6DA300579B1E /* TwUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwUITests-Info.plist"; sourceTree = "<group>"; };
 		CB5B266C13BE6DA300579B1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -428,16 +410,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB5B265D13BE6DA300579B1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB5B266313BE6DA300579B1E /* SenTestingKit.framework in Frameworks */,
-				CB5B266413BE6DA300579B1E /* Cocoa.framework in Frameworks */,
-				CB5B266713BE6DA300579B1E /* TwUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB5E321613BE7098004B7899 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,7 +439,6 @@
 			children = (
 				CB5B264C13BE6DA200579B1E /* TwUI.framework */,
 				CB5E321813BE7098004B7899 /* libtwui.dylib */,
-				CB5B266113BE6DA300579B1E /* Tests.octest */,
 				5EE983B713BE7809005F430D /* libtwui.a */,
 			);
 			name = Products;
@@ -800,25 +771,6 @@
 			productReference = CB5B264C13BE6DA200579B1E /* TwUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CB5B266013BE6DA300579B1E /* Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB5B267713BE6DA300579B1E /* Build configuration list for PBXNativeTarget "Tests" */;
-			buildPhases = (
-				CB5B265C13BE6DA300579B1E /* Sources */,
-				CB5B265D13BE6DA300579B1E /* Frameworks */,
-				CB5B265E13BE6DA300579B1E /* Resources */,
-				CB5B265F13BE6DA300579B1E /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB5B266613BE6DA300579B1E /* PBXTargetDependency */,
-			);
-			name = Tests;
-			productName = TwUITests;
-			productReference = CB5B266113BE6DA300579B1E /* Tests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		CB5E321713BE7098004B7899 /* Dynamic Library */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB5E321B13BE70B7004B7899 /* Build configuration list for PBXNativeTarget "Dynamic Library" */;
@@ -842,6 +794,7 @@
 		CB5B264213BE6DA200579B1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0700;
 				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = CB5B264513BE6DA200579B1E /* Build configuration list for PBXProject "TwUI" */;
@@ -859,7 +812,6 @@
 				CB5B264B13BE6DA200579B1E /* TwUI */,
 				CB5E321713BE7098004B7899 /* Dynamic Library */,
 				5EE983B613BE7809005F430D /* Static Library */,
-				CB5B266013BE6DA300579B1E /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -873,32 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB5B265E13BE6DA300579B1E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB5B266D13BE6DA300579B1E /* InfoPlist.strings in Resources */,
-				CB5B266F13BE6DA300579B1E /* TwUITests.h in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CB5B265F13BE6DA300579B1E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EE983B313BE7809005F430D /* Sources */ = {
@@ -1028,15 +955,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB5B265C13BE6DA300579B1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB5B267113BE6DA300579B1E /* TwUITests.m in Sources */,
-				886EBA8513D64393006DE018 /* TUIControl+Private.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CB5E321513BE7098004B7899 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1101,14 +1019,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CB5B266613BE6DA300579B1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB5B264B13BE6DA200579B1E /* TwUI */;
-			targetProxy = CB5B266513BE6DA300579B1E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB5B265813BE6DA200579B1E /* InfoPlist.strings */ = {
@@ -1232,30 +1142,6 @@
 			};
 			name = Release;
 		};
-		CB5B267813BE6DA300579B1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PREFIX_HEADER = "TwUI/TwUI-Prefix.pch";
-				INFOPLIST_FILE = "TwUITests/TwUITests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		CB5B267913BE6DA300579B1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_PREFIX_HEADER = "TwUI/TwUI-Prefix.pch";
-				INFOPLIST_FILE = "TwUITests/TwUITests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		CB5E321913BE7099004B7899 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1327,15 +1213,6 @@
 			buildConfigurations = (
 				CB5B267513BE6DA300579B1E /* Debug */,
 				CB5B267613BE6DA300579B1E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB5B267713BE6DA300579B1E /* Build configuration list for PBXNativeTarget "Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB5B267813BE6DA300579B1E /* Debug */,
-				CB5B267913BE6DA300579B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

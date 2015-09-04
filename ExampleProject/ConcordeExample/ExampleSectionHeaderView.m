@@ -1,5 +1,42 @@
 #import "ExampleSectionHeaderView.h"
 
+
+
+
+@implementation StickyFooterView
+-(id)initWithFrame:(CGRect)frame {
+    if((self = [super initWithFrame:frame])) {
+        _labelRenderer = [[TUITextRenderer alloc] init];
+        TUIImageView *iv = [[TUIImageView alloc]initWithFrame:frame];
+        iv.image = [TUIImage imageNamed:@"footer.png"];
+        [self addSubview:iv];
+        
+        
+        self.textRenderers = [NSArray arrayWithObjects:_labelRenderer, nil];
+        self.opaque = TRUE;
+    }
+    return self;
+}
+
+@end
+
+@implementation StickyHeaderView
+-(id)initWithFrame:(CGRect)frame {
+    if((self = [super initWithFrame:frame])) {
+        _labelRenderer = [[TUITextRenderer alloc] init];
+        TUIImageView *iv = [[TUIImageView alloc]initWithFrame:frame];
+        iv.image = [TUIImage imageNamed:@"top.png"];
+        [self addSubview:iv];
+        
+        
+        self.textRenderers = [NSArray arrayWithObjects:_labelRenderer, nil];
+        self.opaque = TRUE;
+    }
+    return self;
+}
+
+@end
+
 @implementation ExampleSectionHeaderView
 
 @synthesize labelRenderer = _labelRenderer;
@@ -14,6 +51,11 @@
 -(id)initWithFrame:(CGRect)frame {
 	if((self = [super initWithFrame:frame])) {
 		_labelRenderer = [[TUITextRenderer alloc] init];
+        TUIImageView *iv = [[TUIImageView alloc]initWithFrame:frame];
+        iv.image = [TUIImage imageNamed:@"banner.png"];
+        [self addSubview:iv];
+ 
+
 		self.textRenderers = [NSArray arrayWithObjects:_labelRenderer, nil];
 		self.opaque = TRUE;
 	}

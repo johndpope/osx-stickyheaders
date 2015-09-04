@@ -32,8 +32,8 @@
 		exampleFont2 = [TUIFont fontWithName:@"HelveticaNeue-Bold" size:15];
 		
 		CGRect b = self.bounds;
-		b.origin.y += TAB_HEIGHT;
-		b.size.height -= TAB_HEIGHT;
+	//	b.origin.y += TAB_HEIGHT;
+	//	b.size.height -= TAB_HEIGHT;
 		
 		/*
 		 Note by default scroll views (and therefore table views) don't
@@ -47,16 +47,7 @@
 		_tableView.maintainContentOffsetAfterReload = TRUE;
 		[self addSubview:_tableView];
 		
-		_tabBar = [[ExampleTabBar alloc] initWithNumberOfTabs:5];
-		_tabBar.delegate = self;
-		// It'd be easier to just use .autoresizingmask, but for demonstration we'll use ^layout.
-		_tabBar.layout = ^(TUIView *v) { // 'v' in this case will point to the same object as 'tabs'
-			TUIView *superview = v.superview; // note we're using the passed-in 'v' argument, rather than referencing 'tabs' in the block, this avoids a retain cycle without jumping through hoops
-			CGRect rect = superview.bounds; // take the superview bounds
-			rect.size.height = TAB_HEIGHT; // only take up the bottom 60px
-			return rect;
-		};
-		[self addSubview:_tabBar];
+
 		
 		// setup individual tabs
 		for(TUIView *tabView in _tabBar.tabViews) {
@@ -118,33 +109,49 @@
 
 - (NSInteger)numberOfSectionsInTableView:(TUITableView *)tableView
 {
-	return 8;
+	return 2;
 }
 
 - (NSInteger)tableView:(TUITableView *)table numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 0) return 25;
+    if (section == 1) return 0;
+    
 	return 25;
 }
 
 - (CGFloat)tableView:(TUITableView *)tableView heightForRowAtIndexPath:(TUIFastIndexPath *)indexPath
 {
-	return 50.0;
+
+	return 132;
 }
 
 - (TUIView *)tableView:(TUITableView *)tableView headerViewForSection:(NSInteger)section
 {
-	ExampleSectionHeaderView *view = [[ExampleSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, 100, 32)];
-	TUIAttributedString *title = [TUIAttributedString stringWithString:[NSString stringWithFormat:@"Example Section %d", section]];
-	title.color = [TUIColor blackColor];
-	title.font = exampleFont2;
-	view.labelRenderer.attributedString = title;
-	return view;
+   // if (section == 0) return [[TUIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 55)];
+    if (section == 1) return [[StickyFooterView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 532)];
+
+    StickyHeaderView *v = [[StickyHeaderView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 55)];
+    return v;
+
 }
 
 - (TUITableViewCell *)tableView:(TUITableView *)tableView cellForRowAtIndexPath:(TUIFastIndexPath *)indexPath
 {
 	ExampleTableViewCell *cell = reusableTableCellOfClass(tableView, ExampleTableViewCell);
-	
+    if (indexPath.row == 0 && indexPath.section == 0){
+        TUIImageView *iv = [[TUIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 132)];
+        iv.image = [TUIImage imageNamed:@"banner.png"];
+        iv.tag = 111;
+        [cell addSubview:iv];
+        
+    }else{
+        TUIImageView *iv  = [cell viewWithTag:111];
+        [iv removeFromSuperview];
+    }
+    
+
+    
 	TUIAttributedString *s = [TUIAttributedString stringWithString:[NSString stringWithFormat:@"example cell %d", indexPath.row]];
 	s.color = [TUIColor blackColor];
 	s.font = exampleFont1;

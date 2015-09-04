@@ -2,6 +2,8 @@
 
 #import "TUIKit.h"
 
+
+
 @interface ExampleSectionHeaderView : TUITableViewSectionHeader {
   
   TUITextRenderer * _labelRenderer;
@@ -12,3 +14,14 @@
 
 @end
 
+@interface StickyHeaderView : ExampleSectionHeaderView {
+
+}
+
+@end
+
+@interface StickyFooterView : ExampleSectionHeaderView {
+    
+}
+
+@end
