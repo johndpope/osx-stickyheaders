@@ -13,9 +13,9 @@
 		5C782FD013A54FFF00CF69EF /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C782FCF13A54FFD00CF69EF /* ApplicationServices.framework */; };
 		5C782FD713A556A900CF69EF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C782FD613A556A800CF69EF /* QuartzCore.framework */; };
 		5C90DB9D13A7C08E00ECDD14 /* ExampleTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C90DB9C13A7C08D00ECDD14 /* ExampleTabBar.m */; };
-		5D4721931B99691300636F98 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4721921B99691300636F98 /* banner.png */; settings = {ASSET_TAGS = (); }; };
-		5D4721971B996AF100636F98 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4721961B996AF100636F98 /* footer.png */; settings = {ASSET_TAGS = (); }; };
-		5D9562741B99413D007C1685 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9562731B99413D007C1685 /* top.png */; settings = {ASSET_TAGS = (); }; };
+		5D47219C1B99723400636F98 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D4721991B99723400636F98 /* banner.png */; settings = {ASSET_TAGS = (); }; };
+		5D47219D1B99723400636F98 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47219A1B99723400636F98 /* footer.png */; settings = {ASSET_TAGS = (); }; };
+		5D47219E1B99723400636F98 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D47219B1B99723400636F98 /* top.png */; settings = {ASSET_TAGS = (); }; };
 		5ED56678139DC30300031CDF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ED56677139DC30300031CDF /* Cocoa.framework */; };
 		5ED56682139DC30300031CDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ED56680139DC30300031CDF /* InfoPlist.strings */; };
 		5ED56685139DC30300031CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED56684139DC30300031CDF /* main.m */; };
@@ -69,9 +69,9 @@
 		5C782FD613A556A800CF69EF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5C90DB9B13A7C08D00ECDD14 /* ExampleTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTabBar.h; sourceTree = "<group>"; };
 		5C90DB9C13A7C08D00ECDD14 /* ExampleTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTabBar.m; sourceTree = "<group>"; };
-		5D4721921B99691300636F98 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = banner.png; path = ../../../../../Desktop/banner.png; sourceTree = "<group>"; };
-		5D4721961B996AF100636F98 /* footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = footer.png; path = ../../../../../Desktop/footer.png; sourceTree = "<group>"; };
-		5D9562731B99413D007C1685 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top.png; path = ../../../../../Desktop/top.png; sourceTree = "<group>"; };
+		5D4721991B99723400636F98 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
+		5D47219A1B99723400636F98 /* footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer.png; sourceTree = "<group>"; };
+		5D47219B1B99723400636F98 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
 		5ED56673139DC30300031CDF /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ED56677139DC30300031CDF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5ED5667A139DC30300031CDF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -108,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D4721981B99723400636F98 /* sticky */ = {
+			isa = PBXGroup;
+			children = (
+				5D4721991B99723400636F98 /* banner.png */,
+				5D47219A1B99723400636F98 /* footer.png */,
+				5D47219B1B99723400636F98 /* top.png */,
+			);
+			path = sticky;
+			sourceTree = "<group>";
+		};
 		5ED56668139DC30300031CDF = {
 			isa = PBXGroup;
 			children = (
@@ -150,9 +160,7 @@
 		5ED5667D139DC30300031CDF /* ConcordeExample */ = {
 			isa = PBXGroup;
 			children = (
-				5D4721961B996AF100636F98 /* footer.png */,
-				5D4721921B99691300636F98 /* banner.png */,
-				5D9562731B99413D007C1685 /* top.png */,
+				5D4721981B99723400636F98 /* sticky */,
 				5ED56689139DC30300031CDF /* ExampleAppDelegate.h */,
 				5ED5668A139DC30300031CDF /* ExampleAppDelegate.m */,
 				5C55D83213A667A0000ED768 /* ExampleView.h */,
@@ -276,12 +284,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4721931B99691300636F98 /* banner.png in Resources */,
 				5ED56682139DC30300031CDF /* InfoPlist.strings in Resources */,
 				5ED56688139DC30300031CDF /* Credits.rtf in Resources */,
 				5ED5668E139DC30300031CDF /* MainMenu.xib in Resources */,
-				5D4721971B996AF100636F98 /* footer.png in Resources */,
-				5D9562741B99413D007C1685 /* top.png in Resources */,
+				5D47219C1B99723400636F98 /* banner.png in Resources */,
+				5D47219D1B99723400636F98 /* footer.png in Resources */,
+				5D47219E1B99723400636F98 /* top.png in Resources */,
 				5C57CF3D13A7E7C00032AC1F /* clock.png in Resources */,
 				D3EC0C4A1432325A003C162C /* large-image.jpeg in Resources */,
 			);
