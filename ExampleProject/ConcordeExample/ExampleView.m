@@ -109,13 +109,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(TUITableView *)tableView
 {
-	return 2;
+	return 3;
 }
 
 - (NSInteger)tableView:(TUITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) return 25;
-    if (section == 1) return 0;
+    if (section == 0) return 1;
+    if (section == 1) return 23;
     
 	return 25;
 }
@@ -128,28 +128,30 @@
 
 - (TUIView *)tableView:(TUITableView *)tableView headerViewForSection:(NSInteger)section
 {
-   // if (section == 0) return [[TUIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 55)];
-    if (section == 1) return [[StickyFooterView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 532)];
 
-    StickyHeaderView *v = [[StickyHeaderView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 55)];
-    return v;
+    if (section == 2) return [[StickyFooterView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 532)];
+
+    if (section == 1) return [[StickyNavBarView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 70)];
+    if (section == 0) return [[StickyHeaderView alloc]  initWithFrame:CGRectMake(0, 0, self.frame.size.width, 55)];
+    
+    
+ 
 
 }
 
 - (TUITableViewCell *)tableView:(TUITableView *)tableView cellForRowAtIndexPath:(TUIFastIndexPath *)indexPath
 {
 	ExampleTableViewCell *cell = reusableTableCellOfClass(tableView, ExampleTableViewCell);
+    TUIImageView *iv  = [cell viewWithTag:111];
+    [iv removeFromSuperview];
+    
     if (indexPath.row == 0 && indexPath.section == 0){
         TUIImageView *iv = [[TUIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 132)];
         iv.image = [TUIImage imageNamed:@"banner.png"];
         iv.tag = 111;
         [cell addSubview:iv];
         
-    }else{
-        TUIImageView *iv  = [cell viewWithTag:111];
-        [iv removeFromSuperview];
     }
-    
 
     
 	TUIAttributedString *s = [TUIAttributedString stringWithString:[NSString stringWithFormat:@"example cell %d", indexPath.row]];

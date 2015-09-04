@@ -35,7 +35,27 @@
     return self;
 }
 
+
 @end
+
+@implementation StickyNavBarView
+-(id)initWithFrame:(CGRect)frame {
+    if((self = [super initWithFrame:frame])) {
+        _labelRenderer = [[TUITextRenderer alloc] init];
+        TUIImageView *iv = [[TUIImageView alloc]initWithFrame:frame];
+        iv.image = [TUIImage imageNamed:@"navbar.png"];
+        [self addSubview:iv];
+        
+        
+        self.textRenderers = [NSArray arrayWithObjects:_labelRenderer, nil];
+        self.opaque = TRUE;
+    }
+    return self;
+}
+
+
+@end
+
 
 @implementation ExampleSectionHeaderView
 

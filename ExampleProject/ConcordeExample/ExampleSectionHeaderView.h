@@ -25,3 +25,9 @@
 }
 
 @end
+
+@interface StickyNavBarView : ExampleSectionHeaderView {
+    
+}
+
+@end
