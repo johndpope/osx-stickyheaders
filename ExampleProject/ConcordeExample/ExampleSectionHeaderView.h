@@ -14,7 +14,7 @@
 
 @end
 
-@interface StickyHeaderView : ExampleSectionHeaderView {
+@interface TopHeaderView : ExampleSectionHeaderView {
 
 }
 

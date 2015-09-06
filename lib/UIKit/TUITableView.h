@@ -18,22 +18,22 @@
 #import "TUIFastIndexPath.h"
 
 typedef enum {
-	TUITableViewStylePlain,              // regular table view
-	TUITableViewStyleGrouped, // grouped table view—headers stick to the top of the table view and scroll with it
+    TUITableViewStylePlain,              // regular table view
+    TUITableViewStyleGrouped, // grouped table view—headers stick to the top of the table view and scroll with it
 } TUITableViewStyle;
 
 typedef enum {
-	TUITableViewScrollPositionNone,        
-	TUITableViewScrollPositionTop,    
-	TUITableViewScrollPositionMiddle,   
-	TUITableViewScrollPositionBottom,
-	TUITableViewScrollPositionToVisible, // currently the only supported arg
+    TUITableViewScrollPositionNone,
+    TUITableViewScrollPositionTop,
+    TUITableViewScrollPositionMiddle,
+    TUITableViewScrollPositionBottom,
+    TUITableViewScrollPositionToVisible, // currently the only supported arg
 } TUITableViewScrollPosition;
 
 typedef enum {
-  TUITableViewInsertionMethodBeforeIndex  = NSOrderedAscending,
-  TUITableViewInsertionMethodAtIndex      = NSOrderedSame,
-  TUITableViewInsertionMethodAfterIndex   = NSOrderedDescending
+    TUITableViewInsertionMethodBeforeIndex  = NSOrderedAscending,
+    TUITableViewInsertionMethodAtIndex      = NSOrderedSame,
+    TUITableViewInsertionMethodAfterIndex   = NSOrderedDescending
 } TUITableViewInsertionMethod;
 
 @class TUITableViewCell;
@@ -66,46 +66,46 @@ typedef enum {
 
 @interface TUITableView : TUIScrollView
 {
-	TUITableViewStyle             _style;
-	__unsafe_unretained id <TUITableViewDataSource>	_dataSource; // weak
-	NSArray                     * _sectionInfo;
-	
-	TUIView                     * _pullDownView;
-	TUIView							        * _headerView;
-	
-	CGSize                        _lastSize;
-	CGFloat                       _contentHeight;
-	
-	NSMutableIndexSet           * _visibleSectionHeaders;
-	NSMutableDictionary         * _visibleItems;
-	NSMutableDictionary         * _reusableTableCells;
-	
-	TUIFastIndexPath            * _selectedIndexPath;
-	TUIFastIndexPath            * _indexPathShouldBeFirstResponder;
-	NSInteger                     _futureMakeFirstResponderToken;
-	TUIFastIndexPath            * _keepVisibleIndexPathForReload;
-	CGFloat                       _relativeOffsetForReload;
-	
-	// drag-to-reorder state
-  TUITableViewCell            * _dragToReorderCell;
-  CGPoint                       _currentDragToReorderLocation;
-  CGPoint                       _currentDragToReorderMouseOffset;
-  TUIFastIndexPath            * _currentDragToReorderIndexPath;
-  TUITableViewInsertionMethod   _currentDragToReorderInsertionMethod;
-  TUIFastIndexPath            * _previousDragToReorderIndexPath;
-  TUITableViewInsertionMethod   _previousDragToReorderInsertionMethod;
-  
-	struct {
-		unsigned int animateSelectionChanges:1;
-		unsigned int forceSaveScrollPosition:1;
-		unsigned int derepeaterEnabled:1;
-		unsigned int layoutSubviewsReentrancyGuard:1;
-		unsigned int didFirstLayout:1;
-		unsigned int dataSourceNumberOfSectionsInTableView:1;
-		unsigned int delegateTableViewWillDisplayCellForRowAtIndexPath:1;
-		unsigned int maintainContentOffsetAfterReload:1;
-	} _tableFlags;
-	
+    TUITableViewStyle _style;
+    __unsafe_unretained id <TUITableViewDataSource> _dataSource; // weak
+    NSArray                     * _sectionInfo;
+    
+    TUIView                     * _pullDownView;
+    TUIView                                                         * _headerView;
+    
+    CGSize _lastSize;
+    CGFloat _contentHeight;
+    
+    NSMutableIndexSet           * _visibleSectionHeaders;
+    NSMutableDictionary         * _visibleItems;
+    NSMutableDictionary         * _reusableTableCells;
+    
+    TUIFastIndexPath            * _selectedIndexPath;
+    TUIFastIndexPath            * _indexPathShouldBeFirstResponder;
+    NSInteger _futureMakeFirstResponderToken;
+    TUIFastIndexPath            * _keepVisibleIndexPathForReload;
+    CGFloat _relativeOffsetForReload;
+    
+    // drag-to-reorder state
+    TUITableViewCell            * _dragToReorderCell;
+    CGPoint _currentDragToReorderLocation;
+    CGPoint _currentDragToReorderMouseOffset;
+    TUIFastIndexPath            * _currentDragToReorderIndexPath;
+    TUITableViewInsertionMethod _currentDragToReorderInsertionMethod;
+    TUIFastIndexPath            * _previousDragToReorderIndexPath;
+    TUITableViewInsertionMethod _previousDragToReorderInsertionMethod;
+    
+    struct {
+        unsigned int animateSelectionChanges : 1;
+        unsigned int forceSaveScrollPosition : 1;
+        unsigned int derepeaterEnabled : 1;
+        unsigned int layoutSubviewsReentrancyGuard : 1;
+        unsigned int didFirstLayout : 1;
+        unsigned int dataSourceNumberOfSectionsInTableView : 1;
+        unsigned int delegateTableViewWillDisplayCellForRowAtIndexPath : 1;
+        unsigned int maintainContentOffsetAfterReload : 1;
+    } _tableFlags;
+    
 }
 
 - (id)initWithFrame:(CGRect)frame style:(TUITableViewStyle)style;                // must specify style at creation. -initWithFrame: calls this with UITableViewStylePlain
@@ -113,9 +113,9 @@ typedef enum {
 @property (nonatomic,unsafe_unretained) id <TUITableViewDataSource>  dataSource;
 @property (nonatomic,unsafe_unretained) id <TUITableViewDelegate>    delegate;
 
-@property (readwrite, assign) BOOL                        animateSelectionChanges;
+@property (readwrite, assign) BOOL animateSelectionChanges;
 @property (nonatomic, assign) BOOL maintainContentOffsetAfterReload;
-
+@property (readwrite, assign) BOOL enableStickyHeader;
 - (void)reloadData;
 
 /**
